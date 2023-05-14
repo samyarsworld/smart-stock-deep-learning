@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Sell
+{% endblock %}
+
+{% block main %}
+<h1><span class="">Sell</span></h1>
+
+<form action="/sell" method="post">
+    <div class="mb-3">
+        <select class="form-select ml-auto mr-auto" name="symbol" style="width: 20%;"
+            aria-label=" Default select example">
+            <option selected>Choose stock</option>
+            {% for symbol in symbols %}
+            <option value="{{ symbol }}">{{ symbol }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares"
+            placeholder="Shares" type="text">
+    </div>
+    <button class="btn btn-danger" type="submit">Sell</button>
+</form>
+
+
+{% endblock %}
