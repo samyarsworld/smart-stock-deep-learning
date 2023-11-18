@@ -1,4 +1,4 @@
-# Smart Stock
+# Smart Stock AI
 
 Smart Stock is a stock exchange web app where you can buy and sell stocks.
 
